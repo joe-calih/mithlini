@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Column 1 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Components</h3>
+            <h3 className="text-lg font-semibold mb-4">Fitness Topics</h3>
             <ul className="space-y-4">
-              {["Hero Sections", "Logo Clouds", "Bento Grids", "CTA Sections", "Testimonials", "Feature Sections"].map((item) => (
+              {["Gym", "Weightlifting", "Yoga", "Calisthenics", "Cardio", "Nutrition"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className=" hover:text-gray-900">
+                  <Link href={`/${item.toLowerCase()}`} className=" hover:text-gray-900">
                     {item}
                   </Link>
                 </li>
@@ -21,11 +21,11 @@ export default function Footer() {
 
           {/* Column 2 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Templates</h3>
+            <h3 className="text-lg font-semibold mb-4">Training Resources</h3>
             <ul className="space-y-4">
-              {["Startup Landing Page Template", "AI SaaS Template", "Proactiv Marketing Template", "Agenlabs Agency Template", "DevPro Portfolio Template"].map((item) => (
+              {["Personal Training Courses", "HIIT Workouts", "Flexibility Training", "Strength Programs", "Endurance Plans"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className=" hover:text-gray-900">
+                  <Link href={`/${item.toLowerCase().replace(/ /g, "-")}`} className=" hover:text-gray-900">
                     {item}
                   </Link>
                 </li>
@@ -35,26 +35,25 @@ export default function Footer() {
 
           {/* Column 3 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Aceternity UI</h3>
+            <h3 className="text-lg font-semibold mb-4">Fitness Tools</h3>
             <ul className="space-y-4">
-              {["Aceternity Studio", "Licence", "Refunds", "Privacy Policy", "Terms and Conditions"].map((item) => (
+              {["BMI Calculator", "Workout Planner", "Calorie Tracker", "Progress Tracker", "Meal Prep Tools"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className=" hover:text-gray-900">
+                  <Link href={`/${item.toLowerCase().replace(/ /g, "-")}`} className=" hover:text-gray-900">
                     {item}
                   </Link>
                 </li>
               ))}
             </ul>
-            
           </div>
 
           {/* Column 4 */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Pages</h3>
+            <h3 className="text-lg font-semibold mb-4">Other Pages</h3>
             <ul className="space-y-4">
-              {["Best Modern Design Templates", "Best AI SaaS Templates", "Best Marketing Templates",  "Agenlabs Agency Template", "DevPro Portfolio Template"].map((item) => (
+              {["About Us", "Contact", "FAQs", "Blog", "Success Stories"].map((item) => (
                 <li key={item}>
-                  <Link href="#" className=" hover:text-gray-900">
+                  <Link href={`/${item.toLowerCase().replace(/ /g, "-")}`} className=" hover:text-gray-900">
                     {item}
                   </Link>
                 </li>
@@ -75,5 +74,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

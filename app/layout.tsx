@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import BackToTopButton from "@/components/BackToTopButton";
+import BlogFooter from "@/components/BlogFooter";
+import Header from "@/components/Header";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -26,12 +28,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Header/>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
         <BackToTopButton />
       </body>
+      
+      <BlogFooter />
     </html>
   );
 }

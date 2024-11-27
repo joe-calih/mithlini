@@ -36,7 +36,7 @@ const Home = () => {
     <div className="flex flex-col min-h-screen">
       <main className="flex-1">
         {/* Contact Section */}
-        <section className="py-20 bg-muted">
+        <section className="py-28 bg-muted">
           <div className="container mx-auto max-w-[1200px]">
             <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2>
             <Card className="max-w-2xl mx-auto">
